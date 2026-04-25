@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 388" role="img" aria-label="Remote IDE code editor with Claude Code terminal overlay">
+  <defs>
+    <clipPath id="win">
+      <rect width="640" height="388" rx="14"/>
+    </clipPath>
+    <clipPath id="overlay-clip">
+      <rect x="228" y="182" width="388" height="192" rx="10"/>
+    </clipPath>
+    <filter id="overlay-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(0,0,0,0.7)"/>
+    </filter>
+  </defs>
+
+  <g clip-path="url(#win)">
+    <!-- window background -->
+    <rect width="640" height="388" fill="#13131e"/>
+
+    <!-- title bar -->
+    <rect width="640" height="42" fill="#18181f"/>
+    <line x1="0" y1="42" x2="640" y2="42" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+    <!-- traffic lights -->
+    <circle cx="22" cy="21" r="7" fill="#ff5f57"/>
+    <circle cx="46" cy="21" r="7" fill="#fec409"/>
+    <circle cx="70" cy="21" r="7" fill="#28c840"/>
+
+    <!-- title -->
+    <text x="320" y="27" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, system-ui, sans-serif"
+          font-size="13" fill="#7a7a96">MacBook-Pro-Sergey — Remote-IDE</text>
+
+    <!-- code lines -->
+    <g font-family="'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace" font-size="14">
+
+      <text y="72">
+        <tspan x="52" text-anchor="end" fill="#4a4a68">1</tspan>
+        <tspan x="72" fill="#FC5FA3">import</tspan><tspan fill="#e8e8f0"> </tspan><tspan fill="#5DD8FF">Foundation</tspan>
+      </text>
+
+      <text y="98">
+        <tspan x="52" text-anchor="end" fill="#4a4a68">2</tspan>
+      </text>
+
+      <text y="124">
+        <tspan x="52" text-anchor="end" fill="#4a4a68">3</tspan>
+        <tspan x="72" fill="#FC5FA3">struct</tspan><tspan fill="#e8e8f0"> </tspan><tspan fill="#5DD8FF">Project</tspan><tspan fill="#e8e8f0">: </tspan><tspan fill="#5DD8FF">Identifiable</tspan><tspan fill="#e8e8f0">, </tspan><tspan fill="#5DD8FF">Codable</tspan><tspan fill="#e8e8f0"> {</tspan>
+      </text>
+
+      <text y="150">
+        <tspan x="52" text-anchor="end" fill="#4a4a68">4</tspan>
+        <tspan x="106" fill="#FC5FA3">let</tspan><tspan fill="#e8e8f0"> id: </tspan><tspan fill="#5DD8FF">UUID</tspan>
+      </text>
+
+      <text y="176">
+        <tspan x="52" text-anchor="end" fill="#4a4a68">5</tspan>
+        <tspan x="106" fill="#FC5FA3">var</tspan><tspan fill="#e8e8f0"> name: </tspan><tspan fill="#5DD8FF">String</tspan>
+      </text>
+
+      <text y="202">
+        <tspan x="52" text-anchor="end" fill="#4a4a68">6</tspan>
+        <tspan x="106" fill="#FC5FA3">var</tspan><tspan fill="#e8e8f0"> path: </tspan><tspan fill="#5DD8FF">String</tspan>
+      </text>
+
+      <text y="228">
+        <tspan x="52" text-anchor="end" fill="#4a4a68">7</tspan>
+      </text>
+
+      <text y="254">
+        <tspan x="52" text-anchor="end" fill="#4a4a68">8</tspan>
+        <tspan x="106" fill="#FC5FA3">var</tspan><tspan fill="#e8e8f0"> url: </tspan><tspan fill="#5DD8FF">URL</tspan><tspan fill="#e8e8f0">? {</tspan>
+      </text>
+
+      <text y="280">
+        <tspan x="52" text-anchor="end" fill="#4a4a68">9</tspan>
+        <tspan x="139" fill="#5DD8FF">FileManagerService</tspan><tspan fill="#e8e8f0">.</tspan><tspan fill="#67B7A4">iCloudContainerURL</tspan><tspan fill="#e8e8f0">?</tspan>
+      </text>
+
+      <text y="306">
+        <tspan x="52" text-anchor="end" fill="#4a4a68">10</tspan>
+        <tspan x="173" fill="#e8e8f0">.</tspan><tspan fill="#67B7A4">appendingPathComponent</tspan><tspan fill="#e8e8f0">(path)</tspan>
+      </text>
+
+      <text y="332">
+        <tspan x="52" text-anchor="end" fill="#4a4a68">11</tspan>
+        <tspan x="106" fill="#e8e8f0">}</tspan>
+      </text>
+
+      <text y="358">
+        <tspan x="52" text-anchor="end" fill="#4a4a68">12</tspan>
+        <tspan x="72" fill="#e8e8f0">}</tspan>
+      </text>
+
+    </g>
+
+    <!-- cursor after } on line 12 -->
+    <rect x="81" y="344" width="2" height="18" fill="#007AFF">
+      <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+
+  </g>
+
+  <!-- ── Claude Code overlay window ── -->
+  <!-- shadow only (filtered separately so content stays sharp) -->
+  <rect x="228" y="182" width="388" height="192" rx="10" fill="rgba(0,0,0,0.55)" filter="url(#overlay-shadow)"/>
+
+  <g clip-path="url(#overlay-clip)">
+
+      <!-- background -->
+      <rect x="228" y="182" width="388" height="192" rx="10" fill="#0f0f1a"/>
+
+      <!-- title bar -->
+      <rect x="228" y="182" width="388" height="38" fill="#16161f"/>
+      <line x1="228" y1="220" x2="616" y2="220" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+      <!-- traffic lights (orange + green, matching iPad screenshot) -->
+      <circle cx="246" cy="201" r="6" fill="#ff5f57"/>
+      <circle cx="264" cy="201" r="6" fill="#fec409"/>
+      <circle cx="282" cy="201" r="6" fill="#28c840"/>
+
+      <!-- window title -->
+      <text x="402" y="206" text-anchor="middle"
+            font-family="-apple-system, BlinkMacSystemFont, system-ui, sans-serif"
+            font-size="12" fill="#c8c8d8">Remote-IDE</text>
+
+      <!-- ── Claude Code icon ── -->
+      <rect x="237" y="224" width="44" height="44" rx="8" fill="#0d0d18"/>
+      <svg x="241" y="228" width="36" height="36" viewBox="0 0 24 24">
+        <path clip-rule="evenodd" fill-rule="evenodd" fill="#D97757"
+          d="M20.998 10.949H24v3.102h-3v3.028h-1.487V20H18v-2.921h-1.487V20H15v-2.921H9V20H7.488v-2.921H6V20H4.487v-2.921H3V14.05H0V10.95h3V5h17.998v5.949zM6 10.949h1.488V8.102H6v2.847zm10.51 0H18V8.102h-1.49v2.847z"/>
+      </svg>
+
+      <!-- Claude Code text block (to the right of icon) -->
+      <text x="286" y="241"
+            font-family="'JetBrains Mono', Menlo, Monaco, monospace"
+            font-size="12" fill="#e8e8f0">Claude Code <tspan fill="#7a7a96">v2.1.119</tspan></text>
+      <text x="286" y="258"
+            font-family="'JetBrains Mono', Menlo, Monaco, monospace"
+            font-size="11" fill="#7a7a96">Sonnet 4.6 · Claude Pro</text>
+      <text x="286" y="273"
+            font-family="'JetBrains Mono', Menlo, Monaco, monospace"
+            font-size="11" fill="#7a7a96">~/Documents/Projects/Remote_IDE/Site</text>
+
+      <!-- separator -->
+      <line x1="238" y1="282" x2="608" y2="282" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+      <!-- prompt line -->
+      <text x="238" y="302"
+            font-family="'JetBrains Mono', Menlo, Monaco, monospace"
+            font-size="13" fill="#28c840">❯</text>
+      <!-- prompt cursor -->
+      <rect x="252" y="288" width="7" height="16" fill="#e8e8f0">
+        <animate attributeName="opacity" values="1;0;1" dur="1.2s" begin="0.6s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- hint -->
+      <text x="238" y="321"
+            font-family="-apple-system, BlinkMacSystemFont, system-ui, sans-serif"
+            font-size="11" fill="#4a4a68">? for shortcuts</text>
+
+      <!-- status bar -->
+      <rect x="228" y="356" width="388" height="18" fill="#1b4d1b"/>
+      <text x="238" y="369"
+            font-family="'JetBrains Mono', Menlo, Monaco, monospace"
+            font-size="10" fill="#28c840">◀ Site:1:119 ▶  ✦ Claude Code ✦  07:56 25-Apr</text>
+
+    </g>
+
+</svg>

@@ -6,6 +6,7 @@
 <title>Remote IDE — Code on iPad. Deploy Anywhere.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
 <style>
   :root {
     --blue: #007AFF;
@@ -356,9 +357,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
     margin-bottom: 20px;
     border: 1px solid var(--blue-glow);
+  }
+  .feature-icon svg {
+    width: 22px; height: 22px;
+    stroke: var(--blue);
+    stroke-width: 1.75;
   }
 
   .feature-title {
@@ -614,62 +619,9 @@
   <p class="hero-sub">Remote IDE brings a full development environment to your iPad — edit code, sync files, and execute remote commands over SSH, all in one native app.</p>
   <!-- terminal below -->
 
-  <!-- Terminal Mockup -->
+  <!-- Editor Mockup -->
   <div class="terminal-wrap">
-    <div class="terminal">
-      <div class="terminal-header">
-        <div class="terminal-dots">
-          <div class="dot dot-red"></div>
-          <div class="dot dot-yellow"></div>
-          <div class="dot dot-green"></div>
-        </div>
-        <div class="terminal-title">MacBook-Pro-Sergey — Remote-IDE</div>
-      </div>
-      <div class="terminal-body">
-        <div class="sidebar">
-          <div class="sidebar-section">Projects</div>
-          <div class="sidebar-item active">
-            <span class="sidebar-icon">📁</span> Remote-IDE
-          </div>
-          <div class="sidebar-item">
-            <span class="sidebar-icon">📁</span> MD-Notes
-          </div>
-          <div class="sidebar-section">Remote-IDE</div>
-          <div class="sidebar-item">
-            <span class="sidebar-icon">📁</span> Models
-          </div>
-          <div class="sidebar-item">
-            <span class="sidebar-icon">📁</span> Services
-          </div>
-          <div class="sidebar-item">
-            <span class="sidebar-icon">📁</span> ViewModels
-          </div>
-          <div class="sidebar-item">
-            <span class="sidebar-icon">📁</span> Views
-          </div>
-          <div class="sidebar-item active">
-            <span class="sidebar-icon">🐦</span> Project.swift
-          </div>
-          <div class="sidebar-item">
-            <span class="sidebar-icon">🐦</span> SSHServer.swift
-          </div>
-        </div>
-        <div class="code-area">
-          <div class="code-line"><span class="line-num">1</span><span><span class="kw">import</span> Foundation</span></div>
-          <div class="code-line"><span class="line-num">2</span><span></span></div>
-          <div class="code-line"><span class="line-num">3</span><span><span class="kw">struct</span> <span class="ty">Project</span>: <span class="ty">Identifiable</span>, <span class="ty">Codable</span> {</span></div>
-          <div class="code-line"><span class="line-num">4</span><span>    <span class="kw">let</span> id: <span class="ty">UUID</span></span></div>
-          <div class="code-line"><span class="line-num">5</span><span>    <span class="kw">var</span> name: <span class="ty">String</span></span></div>
-          <div class="code-line"><span class="line-num">6</span><span>    <span class="kw">var</span> path: <span class="ty">String</span></span></div>
-          <div class="code-line"><span class="line-num">7</span><span></span></div>
-          <div class="code-line"><span class="line-num">8</span><span>    <span class="kw">var</span> url: <span class="ty">URL</span>? {</span></div>
-          <div class="code-line"><span class="line-num">9</span><span>        <span class="ty">FileManagerService</span>.<span class="fn">iCloudContainerURL</span>?</span></div>
-          <div class="code-line"><span class="line-num">10</span><span>            .<span class="fn">appendingPathComponent</span>(path)</span></div>
-          <div class="code-line"><span class="line-num">11</span><span>    }</span></div>
-          <div class="code-line"><span class="line-num">12</span><span>}<span class="cursor"></span></span></div>
-        </div>
-      </div>
-    </div>
+    <img src="editor.svg" alt="Remote IDE — Project.swift open in the editor" style="width:100%; border-radius:16px; box-shadow:0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05); display:block;">
   </div>
 </div>
 
@@ -683,47 +635,47 @@
 
   <div class="features-grid reveal">
     <div class="feature-card">
-      <div class="feature-icon">📝</div>
+      <div class="feature-icon"><i data-lucide="file-code-2"></i></div>
       <div class="feature-title">Syntax-highlighted editor</div>
       <p class="feature-desc">Powered by Runestone and Tree-sitter. Supports Swift, Python, JavaScript, TypeScript, Go, Rust, and 15+ more languages with accurate highlighting.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">🖥</div>
+      <div class="feature-icon"><i data-lucide="terminal"></i></div>
       <div class="feature-title">Full SSH terminal</div>
       <p class="feature-desc">Connect to any Linux server and run commands in a real VT100-compatible terminal. Full ANSI escape code support via SwiftTerm.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">☁️</div>
+      <div class="feature-icon"><i data-lucide="cloud"></i></div>
       <div class="feature-title">iCloud Drive sync</div>
       <p class="feature-desc">All projects live in your iCloud Drive. Open files in other apps, access them from your Mac, and never lose your work.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">⬆️</div>
+      <div class="feature-icon"><i data-lucide="arrow-up-to-line"></i></div>
       <div class="feature-title">One-tap file sync</div>
       <p class="feature-desc">Push your entire project to a remote server or pull it back with a single tap. SFTP-powered, fully recursive, blazing fast.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">🔑</div>
+      <div class="feature-icon"><i data-lucide="key-round"></i></div>
       <div class="feature-title">SSH key & password auth</div>
       <p class="feature-desc">Authenticate with a password or private key. Manage multiple servers. All credentials stored securely in the system Keychain.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">⌨️</div>
+      <div class="feature-icon"><i data-lucide="keyboard"></i></div>
       <div class="feature-title">Quick-input toolbar</div>
       <p class="feature-desc">A custom row above the keyboard with Tab, brackets, dot, equals, and hash — the keys you actually need when coding on iPad.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">📂</div>
+      <div class="feature-icon"><i data-lucide="folder-open"></i></div>
       <div class="feature-title">Full file manager</div>
       <p class="feature-desc">Create, rename, delete, and share files and directories. Navigate your project tree with the familiar iOS sidebar.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">💬</div>
+      <div class="feature-icon"><i data-lucide="circle-play"></i></div>
       <div class="feature-title">Saved SSH commands</div>
       <p class="feature-desc">Build a library of frequently used commands. Run any saved command in your active SSH session with one tap.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">🌙</div>
+      <div class="feature-icon"><i data-lucide="sun-moon"></i></div>
       <div class="feature-title">Dark &amp; light themes</div>
       <p class="feature-desc">Automatically follows your system appearance. No manual toggle needed — just open and code.</p>
     </div>
@@ -876,6 +828,8 @@
 </footer>
 
 <script>
+  lucide.createIcons();
+
   // Scroll reveal
   const els = document.querySelectorAll('.reveal');
   const obs = new IntersectionObserver(entries => {
