@@ -26,7 +26,7 @@
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
 
   body {
     background: var(--bg);
@@ -159,8 +159,18 @@
     font-size: clamp(16px, 2vw, 19px);
     color: var(--muted);
     max-width: 560px;
-    margin-bottom: 72px;
+    margin-bottom: 36px;
   }
+
+  .appstore-badge {
+    display: inline-block;
+    margin-bottom: 56px;
+    animation: fadeUp 0.6s 0.25s ease both;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .appstore-badge:hover { opacity: 0.85; transform: translateY(-1px); }
+  .appstore-badge img { height: 52px; display: block; user-select: none; -webkit-user-drag: none; }
 
   /* ─── TERMINAL MOCKUP ─── */
   .terminal-wrap {
@@ -616,8 +626,12 @@
 <div class="hero">
   <div class="hero-badge">iPadOS 26 · Multi-window · Keychain</div>
   <h1>Code on iPad.<br><span class="accent">Deploy Anywhere.</span></h1>
-  <p class="hero-sub">Remote IDE brings a full development environment to your iPad — edit code, sync files, and execute remote commands over SSH, all in one native app.</p>
+  <p class="hero-sub">Edit files, track Git changes, run commands and use your AI coding agent. A real dev environment, built for iPad.</p>
   <!-- terminal below -->
+
+  <a href="https://apps.apple.com/app/remote-ide/id6762590018" class="appstore-badge" target="_blank" rel="noopener">
+    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+  </a>
 
   <!-- Editor Mockup -->
   <div class="terminal-wrap">
