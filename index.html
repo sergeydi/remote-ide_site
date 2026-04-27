@@ -109,7 +109,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 30px 24px 80px;
+    padding: 30px 24px 40px;
     z-index: 1;
   }
 
@@ -342,6 +342,8 @@
     margin-bottom: 60px;
   }
 
+  #features { padding-top: 56px; }
+
   .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -558,13 +560,14 @@
     align-items: center;
     gap: 6px;
     color: var(--blue);
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 500;
     text-decoration: none;
-    transition: gap 0.2s;
+    margin-top: 8px;
+    transition: opacity 0.2s;
   }
 
-  .support-link:hover { gap: 10px; }
+  .support-link:hover { opacity: 0.75; }
 
   /* ─── FOOTER ─── */
   footer {
@@ -654,6 +657,16 @@
       <p class="feature-desc">Powered by Runestone and Tree-sitter. Supports Swift, Python, JavaScript, TypeScript, Go, Rust, and 15+ more languages with accurate highlighting.</p>
     </div>
     <div class="feature-card">
+      <div class="feature-icon"><i data-lucide="bot"></i></div>
+      <div class="feature-title">AI coding agent</div>
+      <p class="feature-desc">Open a dedicated agent window alongside your editor and terminal. Run Claude Code or any AI tool in your SSH session without leaving the app.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i data-lucide="git-branch"></i></div>
+      <div class="feature-title">Git change tracking</div>
+      <p class="feature-desc">Modified files are highlighted in the project tree. See what's changed at a glance, directly in the file manager — no extra tools needed.</p>
+    </div>
+    <div class="feature-card">
       <div class="feature-icon"><i data-lucide="terminal"></i></div>
       <div class="feature-title">Full SSH terminal</div>
       <p class="feature-desc">Connect to any Linux server and run commands in a real VT100-compatible terminal. Full ANSI escape code support via SwiftTerm.</p>
@@ -664,7 +677,7 @@
       <p class="feature-desc">All projects live in your iCloud Drive. Open files in other apps, access them from your Mac, and never lose your work.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon"><i data-lucide="arrow-up-to-line"></i></div>
+      <div class="feature-icon"><i data-lucide="arrow-down-to-line"></i></div>
       <div class="feature-title">One-tap file sync</div>
       <p class="feature-desc">Push your entire project to a remote server or pull it back with a single tap. SFTP-powered, fully recursive, blazing fast.</p>
     </div>
@@ -693,85 +706,10 @@
       <div class="feature-title">Dark &amp; light themes</div>
       <p class="feature-desc">Automatically follows your system appearance. No manual toggle needed — just open and code.</p>
     </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- HOW IT WORKS -->
-<section id="how-it-works">
-  <div class="section-label">How it works</div>
-  <h2>From iPad to<br>production server</h2>
-  <p class="section-desc">Remote IDE bridges your local iCloud workspace with any remote Linux machine over a secure SSH connection.</p>
-
-  <div class="steps reveal">
-    <div class="step">
-      <div class="step-num">01</div>
-      <div class="step-content">
-        <h3>Create a project</h3>
-        <p>Projects are named directories in your iCloud Drive. Create as many as you need — everything stays in sync across your devices automatically.</p>
-        <span class="step-tag">iCloud Drive</span>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">02</div>
-      <div class="step-content">
-        <h3>Connect to your server</h3>
-        <p>Add a server with host, port, username, and your preferred auth method (password or private key). Credentials are saved to Keychain, never to plain storage.</p>
-        <span class="step-tag">SSH · Keychain</span>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">03</div>
-      <div class="step-content">
-        <h3>Edit code on your iPad</h3>
-        <p>Open any file in the syntax-highlighted editor. Write code with hardware keyboard support, a custom toolbar, and full undo/redo history.</p>
-        <span class="step-tag">Runestone · Tree-sitter</span>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">04</div>
-      <div class="step-content">
-        <h3>Deploy with one tap</h3>
-        <p>Push your project to the remote server via SFTP. Run build or deploy commands directly in the SSH terminal without switching apps.</p>
-        <span class="step-tag">SFTP · SwiftTerm</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- TECH STACK -->
-<section>
-  <div class="section-label">Under the hood</div>
-  <h2>Built with the best<br>open-source libraries</h2>
-  <p class="section-desc">Remote IDE uses industry-standard components for reliability and compatibility.</p>
-
-  <div class="tech-grid reveal">
-    <div class="tech-item">
-      <div class="tech-name">Runestone</div>
-      <div class="tech-role">Code editor & syntax highlighting</div>
-    </div>
-    <div class="tech-item">
-      <div class="tech-name">Citadel</div>
-      <div class="tech-role">SSH connection & SFTP file transfer</div>
-    </div>
-    <div class="tech-item">
-      <div class="tech-name">SwiftTerm</div>
-      <div class="tech-role">VT100/ANSI terminal emulator</div>
-    </div>
-    <div class="tech-item">
-      <div class="tech-name">keychain-swift</div>
-      <div class="tech-role">Secure credential storage</div>
-    </div>
-    <div class="tech-item">
-      <div class="tech-name">SwiftUI</div>
-      <div class="tech-role">Native iPadOS interface</div>
-    </div>
-    <div class="tech-item">
-      <div class="tech-name">iCloud Drive</div>
-      <div class="tech-role">Project file storage & sync</div>
+    <div class="feature-card">
+      <div class="feature-icon"><i data-lucide="layout-dashboard"></i></div>
+      <div class="feature-title">Split View &amp; Stage Manager</div>
+      <p class="feature-desc">Run Remote IDE alongside a browser or documentation in Split View, or manage multiple IDE windows in Stage Manager — full iPadOS 26 multi-window support.</p>
     </div>
   </div>
 </section>
@@ -806,30 +744,8 @@
 <section id="support">
   <div class="section-label">Support</div>
   <h2>We're here to help</h2>
-  <p class="section-desc">Have a question or found a bug? Reach out — we respond to every message.</p>
-
-  <div class="support-grid reveal">
-    <div class="support-card">
-      <h3>📧 Email support</h3>
-      <p>Send us a detailed description of your issue and we'll get back to you as soon as possible.</p>
-      <a href="mailto:support@remoteidehq.com" class="support-link">support@remoteidehq.com →</a>
-    </div>
-    <div class="support-card">
-      <h3>🐛 Report a bug</h3>
-      <p>Found something that doesn't work as expected? File an issue and we'll fix it in the next update.</p>
-      <a href="mailto:bugs@remoteidehq.com" class="support-link">bugs@remoteidehq.com →</a>
-    </div>
-    <div class="support-card">
-      <h3>💡 Feature requests</h3>
-      <p>Have an idea that would make Remote IDE even better for your workflow? We'd love to hear it.</p>
-      <a href="mailto:feedback@remoteidehq.com" class="support-link">feedback@remoteidehq.com →</a>
-    </div>
-    <div class="support-card">
-      <h3>📋 Requirements</h3>
-      <p>Remote IDE requires iPadOS 26 or later. Compatible with all iPad models that support iPadOS 26.</p>
-      <span style="font-size:13px;color:var(--muted);">Version 1.0</span>
-    </div>
-  </div>
+  <p class="section-desc">Have a question or found a bug? Reach out by email — we respond to every message.</p>
+  <a href="mailto:remote_ide@icloud.com" class="support-link reveal">remote_ide@icloud.com</a>
 </section>
 
 <!-- FOOTER -->
@@ -853,7 +769,7 @@
         obs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
   els.forEach(el => obs.observe(el));
 </script>
 
