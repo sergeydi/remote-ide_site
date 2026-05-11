@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/#features">Features</a>
+    <span class="breadcrumb-sep">/</span>
+    <span>{{ .Title }}</span>
+  </div>
+  <div class="feature-detail-icon">
+    {{ .Params.icon | safeHTML }}
+  </div>
+  <div class="section-label">Feature</div>
+  <h1>{{ .Title }}</h1>
+  <p class="page-desc">{{ .Params.description }}</p>
+</div>
+
+<section style="padding-top:0;">
+  {{ .Content }}
+
+  <div class="cta-box reveal">
+    <h2>Ready to code on iPad?</h2>
+    <p>Download Remote IDE and connect to your server in under a minute.</p>
+    <a href="{{ .Site.Params.appStoreURL }}" class="appstore-badge" target="_blank" rel="noopener" style="margin-bottom:0;display:inline-block;">
+      <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+    </a>
+  </div>
+</section>
+{{ end }}

@@ -4,27 +4,87 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static HTML marketing website for **Remote IDE**, an iPadOS app for SSH-based code editing on iPad. There is no build system, package manager, or test framework — the entire site is a single `index.html` file with embedded CSS and JavaScript.
+This is a **Hugo** static site for **Remote IDE**, an iPadOS app for SSH-based code editing on iPad. It is deployed via Netlify.
 
 ## Development
 
-To preview locally:
 ```bash
-python3 -m http.server 8000
-# then open http://localhost:8000
+hugo server          # dev server at http://localhost:1313
+hugo build           # production build → public/
 ```
 
-No build, lint, or test commands exist. The file is ready to serve as-is.
+No npm, no Node.js, no test commands.
 
 ## Architecture
 
-Single file: `index.html` (~906 lines)
+Hugo project at the repo root. Build output goes to `public/` (gitignored).
 
-- **CSS** (lines ~10–605): All styles are embedded in `<style>` tags. CSS custom properties define the color palette at the top (`--blue`, `--bg`, `--surface`, `--text`, `--muted`, `--green`). A subtle grid background is applied via a `::before` pseudo-element on `body`. Responsive breakpoint at 768px.
-- **HTML structure** (lines ~603–889): Sections in order — nav → hero (with terminal code mockup) → features (9-card grid) → how-it-works (4-step flow) → tech-stack → privacy → support → footer.
-- **JavaScript** (lines ~891–906): A single `IntersectionObserver` adds `.visible` to `.reveal` elements as they scroll into view, triggering CSS fade-up transitions. No other JS.
+```
+hugo.toml                  # Hugo config (baseURL, params, markup settings)
+netlify.toml               # build command + publish dir for Netlify
+static/
+  css/main.css             # all styles (shared across all pages)
+  fonts/                   # local woff2 fonts (DM Sans, JetBrains Mono)
+  editor.svg               # hero image
+  og-image.png
+  robots.txt
+layouts/
+  _default/
+    baseof.html            # base template: head, nav, main block, footer, scripts
+    single.html            # fallback single page
+    list.html              # fallback list page
+  index.html               # home page (hero + features + privacy + support)
+  features/
+    single.html            # feature detail page layout
+  blog/
+    list.html              # blog listing
+    single.html            # blog post
+  partials/
+    head.html              # <head>: meta, OG, schema.org (home only), CSS link
+    nav.html               # fixed nav with logo and links
+    footer.html            # footer
+    scripts.html           # IntersectionObserver for .reveal animations
+content/
+  _index.md                # home page front matter
+  features/
+    _index.md
+    multi-window.md        # Split View & Stage Manager feature page
+  blog/
+    _index.md
+    getting-started.md     # first blog post
+```
 
-The page has no external JS dependencies — only Google Fonts (JetBrains Mono, DM Sans) are loaded externally.
+## CSS Custom Properties
+
+Defined in `static/css/main.css` at `:root`:
+- `--blue #007AFF`, `--blue-dim`, `--blue-glow`
+- `--bg #0a0a0f`, `--bg2`, `--surface #13131e`
+- `--border`, `--text #e8e8f0`, `--muted #7a7a96`
+- `--green #30d158`, `--amber #ffd60a`
+- `--mono` (JetBrains Mono), `--sans` (DM Sans)
+
+Responsive breakpoint at 768px.
+
+## Adding Content
+
+**New blog post:** create `content/blog/my-post.md` with front matter:
+```yaml
+---
+title: "Post Title"
+date: 2026-05-10
+description: "One-line summary shown as excerpt."
+---
+```
+
+**New feature page:** create `content/features/my-feature.md` with:
+```yaml
+---
+title: "Feature Name"
+description: "Short description shown in page header."
+icon: '<svg>...</svg>'
+---
+```
+The layout in `layouts/features/single.html` renders the icon, title, description, `{{ .Content }}`, and a CTA box automatically.
 
 ## What This Site Describes
 

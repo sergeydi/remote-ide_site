@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <span>{{ .Title }}</span>
+  </div>
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.description }}<p class="page-desc">{{ . }}</p>{{ end }}
+</div>
+<section style="padding-top:0;">
+  <div class="article-body">{{ .Content }}</div>
+</section>
+{{ end }}

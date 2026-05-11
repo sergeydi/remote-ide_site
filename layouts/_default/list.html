@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="section-label">{{ .Title }}</div>
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.description }}<p class="page-desc">{{ . }}</p>{{ end }}
+</div>
+<section style="padding-top:0;">
+  {{ .Content }}
+</section>
+{{ end }}

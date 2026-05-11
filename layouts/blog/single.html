@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/blog/">Blog</a>
+    <span class="breadcrumb-sep">/</span>
+    <span>{{ .Title }}</span>
+  </div>
+  <h1>{{ .Title }}</h1>
+  <div class="article-meta">
+    {{ if not .Date.IsZero }}<span>{{ .Date.Format "January 2, 2006" }}</span>{{ end }}
+    <span>{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+  </div>
+</div>
+
+<section style="padding-top:0;">
+  <div class="article-body">
+    {{ .Content }}
+  </div>
+
+  <div style="margin-top:64px;padding-top:40px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+    <a href="/blog/" style="color:var(--blue);text-decoration:none;font-family:var(--mono);font-size:13px;">← All posts</a>
+    <a href="{{ .Site.Params.appStoreURL }}" class="nav-cta" target="_blank" rel="noopener" style="display:inline-block;padding:10px 20px;background:var(--blue);color:white;border-radius:8px;text-decoration:none;font-size:14px;font-weight:500;">Download Remote IDE</a>
+  </div>
+</section>
+{{ end }}

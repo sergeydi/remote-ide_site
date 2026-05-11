@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="section-label">Blog</div>
+  <h1>From the team</h1>
+  <p class="page-desc">Updates, tips, and deep-dives on building and using Remote IDE.</p>
+</div>
+
+<section style="padding-top:0;">
+  {{ if .Pages }}
+  <div class="blog-grid">
+    {{ range .Pages.ByDate.Reverse }}
+    <a href="{{ .Permalink }}" class="blog-card reveal">
+      <div class="blog-card-date">{{ .Date.Format "January 2, 2006" }}</div>
+      <div class="blog-card-title">{{ .Title }}</div>
+      <p class="blog-card-excerpt">{{ .Summary | plainify | truncate 160 }}</p>
+      <span class="blog-card-read">Read more →</span>
+    </a>
+    {{ end }}
+  </div>
+  {{ else }}
+  <p style="color:var(--muted);">No posts yet — check back soon.</p>
+  {{ end }}
+</section>
+{{ end }}

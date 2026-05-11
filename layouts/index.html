@@ -1,0 +1,131 @@
+{{ define "main" }}
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">iPadOS 26 · Multi-window · Keychain</div>
+  <h1>Code on iPad.<br><span class="accent">Deploy Anywhere.</span></h1>
+  <p class="hero-sub">Edit files, track Git changes, run commands and use your AI coding agent. A real dev environment, built for iPad.</p>
+
+  <a href="{{ .Site.Params.appStoreURL }}" class="appstore-badge" target="_blank" rel="noopener">
+    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+  </a>
+
+  <div class="terminal-wrap">
+    <img src="/editor.svg" alt="Remote IDE — Project.swift open in the editor" fetchpriority="high" style="width:100%; border-radius:16px; box-shadow:0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05); display:block;">
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="section-label">Features</div>
+  <h2>Everything you need<br>to code on the go</h2>
+  <p class="section-desc">A complete toolset for developers who work from their iPad — without compromises.</p>
+
+  <div class="features-grid reveal">
+    <div class="feature-card">
+      <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m5 16-3 3 3 3"/><path d="m9 22 3-3-3-3"/></svg></div>
+      <div class="feature-title">Syntax-highlighted editor</div>
+      <p class="feature-desc">Powered by Runestone and Tree-sitter. Supports Swift, Python, JavaScript, TypeScript, Go, Rust, and 15+ more languages with accurate highlighting.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></div>
+      <div class="feature-title">AI coding agent</div>
+      <p class="feature-desc">Open a dedicated agent window alongside your editor and terminal. Run Claude Code or any AI tool in your SSH session without leaving the app.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6a9 9 0 0 0-9 9V3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/></svg></div>
+      <div class="feature-title">Git change tracking</div>
+      <p class="feature-desc">Modified files are highlighted in the project tree. See what's changed at a glance, directly in the file manager — no extra tools needed.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19h8"/><path d="m4 17 6-6-6-6"/></svg></div>
+      <div class="feature-title">Full SSH terminal</div>
+      <p class="feature-desc">Connect to any Linux server and run commands in a real VT100-compatible terminal. Full ANSI escape code support via SwiftTerm.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></div>
+      <div class="feature-title">iCloud Drive sync</div>
+      <p class="feature-desc">All projects live in your iCloud Drive. Open files in other apps, access them from your Mac, and never lose your work.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17V3"/><path d="m6 11 6 6 6-6"/><path d="M19 21H5"/></svg></div>
+      <div class="feature-title">One-tap file sync</div>
+      <p class="feature-desc">Push your entire project to a remote server or pull it back with a single tap. SFTP-powered, fully recursive, blazing fast.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></svg></div>
+      <div class="feature-title">SSH key &amp; password auth</div>
+      <p class="feature-desc">Authenticate with a password or private key. Manage multiple servers. All credentials stored securely in the system Keychain.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/><path d="M7 16h10"/></svg></div>
+      <div class="feature-title">Quick-input toolbar</div>
+      <p class="feature-desc">A custom row above the keyboard with Tab, brackets, dot, equals, and hash — the keys you actually need when coding on iPad.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg></div>
+      <div class="feature-title">Full file manager</div>
+      <p class="feature-desc">Create, rename, delete, and share files and directories. Navigate your project tree with the familiar iOS sidebar.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"/></svg></div>
+      <div class="feature-title">Saved SSH commands</div>
+      <p class="feature-desc">Build a library of frequently used commands. Run any saved command in your active SSH session with one tap.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2"/><path d="M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715"/><path d="M16 12a4 4 0 0 0-4-4"/><path d="m19 5-1.256 1.256"/><path d="M20 12h2"/></svg></div>
+      <div class="feature-title">Dark &amp; light themes</div>
+      <p class="feature-desc">Automatically follows your system appearance. No manual toggle needed — just open and code.</p>
+    </div>
+    <a href="/features/multi-window/" class="feature-card" style="text-decoration:none;color:inherit;">
+      <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></div>
+      <div class="feature-title">Split View &amp; Stage Manager</div>
+      <p class="feature-desc">Run Remote IDE alongside a browser or documentation in Split View, or manage multiple IDE windows in Stage Manager — full iPadOS 26 multi-window support.</p>
+      <span class="blog-card-read" style="margin-top:16px;">Learn more →</span>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRIVACY -->
+<section id="privacy">
+  <div class="section-label">Privacy</div>
+  <h2>Your code &amp; keys<br>stay private</h2>
+
+  <div class="privacy-box reveal">
+    <div>
+      <p style="color:var(--muted);font-size:15px;line-height:1.75;margin-bottom:24px;">Remote IDE does not collect any data. There are no analytics, no telemetry, and no accounts. Everything stays on your device or in your own iCloud.</p>
+      <p style="color:var(--muted);font-size:15px;line-height:1.75;">Your SSH passwords and private keys are stored exclusively in the iOS Keychain — the same secure hardware-backed enclave used by the system itself. They are never written to files, logged, or transmitted to any third party.</p>
+    </div>
+    <ul class="privacy-points">
+      <li>No accounts or sign-up required</li>
+      <li>No analytics or usage tracking</li>
+      <li>No third-party SDKs or ad networks</li>
+      <li>SSH credentials stored only in Keychain</li>
+      <li>Private keys never leave the device</li>
+      <li>SSH connects only on explicit user action</li>
+      <li>All project files stored in your own iCloud</li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SUPPORT -->
+<section id="support">
+  <div class="section-label">Support</div>
+  <h2>We're here to help</h2>
+  <p class="section-desc">Have a question or found a bug? Reach out by email or open an issue on GitHub — we respond to every message.</p>
+  <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:8px;">
+    <a href="mailto:remote_ide@icloud.com" class="support-link reveal" style="margin-top:0;">remote_ide@icloud.com</a>
+    <a href="https://github.com/sergeydi/Remote-IDE_Support" class="support-link reveal" target="_blank" rel="noopener" style="margin-top:0;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      GitHub Issues
+    </a>
+  </div>
+</section>
+
+{{ end }}

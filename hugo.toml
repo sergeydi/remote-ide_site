@@ -1,0 +1,14 @@
+baseURL = 'https://remote-ide.com/'
+locale = 'en-us'
+title = 'Remote IDE — Code on iPad. Deploy Anywhere.'
+enableRobotsTXT = false
+
+[params]
+  description = "SSH-powered code editor for iPad. Edit files, track Git changes, run terminal commands, and use Claude Code."
+  appStoreURL = "https://apps.apple.com/app/remote-ide/id6762590018"
+  ogImage = "https://remote-ide.com/og-image.png"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[taxonomies]

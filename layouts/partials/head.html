@@ -1,0 +1,29 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:image" content="{{ .Site.Params.ogImage }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Remote IDE",
+  "description": "SSH-powered code editor for iPad. Edit files, track Git changes, run terminal commands, and use Claude Code.",
+  "operatingSystem": "iPadOS",
+  "applicationCategory": "DeveloperApplication",
+  "url": "https://remote-ide.com",
+  "downloadUrl": "https://apps.apple.com/app/remote-ide/id6762590018",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Organization", "name": "Remote IDE" }
+}
+</script>
+{{ end }}
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — Remote IDE{{ end }}</title>
+<link rel="stylesheet" href="/css/main.css">
+</head>
