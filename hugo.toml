@@ -4,7 +4,7 @@ title = 'Remote IDE — Code on iPad. Deploy Anywhere.'
 enableRobotsTXT = false
 
 [params]
-  description = "SSH-powered code editor for iPad. Edit files, track Git changes, run terminal commands, and use Claude Code."
+  description = "iPad SSH client and code editor for iPadOS — a complete remote development environment with terminal, Git tracking, AI agent, and SFTP file sync."
   appStoreURL = "https://apps.apple.com/app/remote-ide/id6762590018"
   ogImage = "https://remote-ide.com/og-image.png"
 

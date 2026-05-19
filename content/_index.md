@@ -1,4 +1,4 @@
 ---
 title: "Remote IDE — Code on iPad. Deploy Anywhere."
-description: "Edit files, track Git changes, run commands and use your AI coding agent. A real dev environment, built for iPad."
+description: "iPad SSH client and code editor for iPadOS — a complete remote development environment with terminal, Git tracking, AI agent, and SFTP file sync."
 ---
