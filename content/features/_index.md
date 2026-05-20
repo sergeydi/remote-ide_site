@@ -1,4 +1,4 @@
 ---
 title: "Features"
-description: "Everything you need to code on iPad — without compromises."
+description: "All Remote IDE features for iPad developers: SSH terminal, code editor, Git tracking, AI agent, SFTP sync, and more. Code on iPad without compromises."
 ---

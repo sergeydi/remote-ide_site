@@ -1,6 +1,6 @@
 ---
 title: "Git Change Tracking"
-description: "See modified, added, deleted, and renamed files at a glance in the project tree. View diffs and git status without leaving the app."
+description: "Git change tracking on iPad. See modified, added, and deleted files in your project tree. View diffs and git status in Remote IDE without leaving the app."
 icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6a9 9 0 0 0-9 9V3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/></svg>'
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Split View & Stage Manager"
-description: "Remote IDE is built for iPadOS 26 multi-window from the ground up. Run multiple SSH sessions, projects, and AI agents side by side."
+description: "Split View and Stage Manager support in Remote IDE for iPad. Run multiple SSH sessions, projects, and AI agents side by side in independent windows."
 icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>'
 ---
 

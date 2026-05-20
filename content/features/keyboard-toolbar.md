@@ -1,6 +1,6 @@
 ---
 title: "Quick-Input Toolbar"
-description: "A custom row above the keyboard with the keys you actually need when coding on iPad — Tab, brackets, dot, equals, and more."
+description: "Custom coding keyboard toolbar for iPad. Quick access to Tab, brackets, braces, and special characters — one tap, no keyboard switching needed."
 icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/><path d="M7 16h10"/></svg>'
 ---
 
