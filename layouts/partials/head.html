@@ -2,14 +2,15 @@
 <!-- Remote IDE — iPad SSH client & code editor for iPadOS -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ $pageTitle := or .Params.seo_title (cond .IsHome .Site.Title (printf "%s — Remote IDE" .Title)) }}
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — Remote IDE{{ end }}">
+<meta property="og:title" content="{{ $pageTitle }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:type" content="{{ if .IsHome }}website{{ else if eq .Section "blog" }}article{{ else }}website{{ end }}">
 <meta property="og:image" content="{{ .Site.Params.ogImage }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — Remote IDE{{ end }}">
+<meta name="twitter:title" content="{{ $pageTitle }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="apple-itunes-app" content="app-id=6762590018">
 <link rel="canonical" href="{{ .Permalink }}">
@@ -81,6 +82,6 @@
 }
 </script>
 {{ end }}
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — Remote IDE{{ end }}</title>
+<title>{{ $pageTitle }}</title>
 <link rel="stylesheet" href="/css/main.css">
 </head>

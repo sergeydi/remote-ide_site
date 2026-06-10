@@ -1,5 +1,6 @@
 ---
 title: "Saved SSH Commands"
+seo_title: "Save & Run SSH Commands on iPad in One Tap — Remote IDE"
 description: "Save and run SSH commands on iPad with one tap. Build a personal library of terminal commands for your remote server sessions in Remote IDE."
 icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"/></svg>'
 ---

@@ -1,6 +1,7 @@
 ---
 title: "iPad as a Developer Tool in the Age of Agentic Programming"
 date: 2026-05-10
+seo_title: "iPad as a Developer Tool: Agentic Coding Era — Remote IDE"
 description: "How agentic coding and iPadOS 26 Stage Manager make the iPad a real developer machine — and how Remote IDE was built from scratch for this workflow."
 ---
 
