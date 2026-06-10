@@ -1,4 +1,4 @@
 ---
 title: "Blog"
-description: "Updates, tips, and deep-dives on building and using Remote IDE."
+description: "Remote IDE blog: tutorials and deep-dives on iPad SSH development, AI coding agents, Stage Manager multi-window workflows, and iPadOS productivity."
 ---

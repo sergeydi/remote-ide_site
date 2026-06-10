@@ -1,7 +1,7 @@
 ---
 title: "iPad as a Developer Tool in the Age of Agentic Programming"
 date: 2026-05-10
-description: "The iPad has become a real developer tool: agentic coding has changed how we work with code, and Stage Manager in iPadOS 26 finally brings true multi-window support. Remote IDE is the first app built from scratch for this combination — code editor, SSH terminal, SFTP sync, and Git in one interface"
+description: "How agentic coding and iPadOS 26 Stage Manager make the iPad a real developer machine — and how Remote IDE was built from scratch for this workflow."
 ---
 
 Not long ago, talking about the iPad as a serious developer tool was met with scepticism. A Netflix machine, a sketching pad, a presentation device — but not a real environment for writing and deploying code. That scepticism had merit: iPadOS lacked proper multitasking for years, tools for working with remote servers barely existed, and the constant need to switch between apps made any serious workflow frustrating.
