@@ -827,6 +827,15 @@
     font-style: italic;
   }
 
+  .article-body img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 24px;
+    display: block;
+  }
+
   /* ─── FEATURE DETAIL PAGE ─── */
   .feature-detail-icon {
     width: 64px; height: 64px;
