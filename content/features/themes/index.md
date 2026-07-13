@@ -5,6 +5,18 @@ description: "Automatic dark and light themes for Remote IDE on iPad. Follows iP
 icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2"/><path d="M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715"/><path d="M16 12a4 4 0 0 0-4-4"/><path d="m19 5-1.256 1.256"/><path d="M20 12h2"/></svg>'
 ---
 
+<div class="section-label" style="margin-bottom:16px;">Same file, both appearances</div>
+<div class="privacy-box reveal" style="grid-template-columns:1fr 1fr;gap:40px;padding:24px;margin-bottom:80px;">
+<div>
+<h3 style="font-family:var(--mono);font-size:18px;font-weight:700;margin-bottom:16px;letter-spacing:-0.5px;">Light</h3>
+<div class="feature-shot"><img src="remote-ide-light-theme-editor.png" alt="pyproject.toml open in the editor in light mode"></div>
+</div>
+<div>
+<h3 style="font-family:var(--mono);font-size:18px;font-weight:700;margin-bottom:16px;letter-spacing:-0.5px;">Dark</h3>
+<div class="feature-shot"><img src="remote-ide-dark-theme-editor.png" alt="The same pyproject.toml file open in the editor in dark mode"></div>
+</div>
+</div>
+
 <div class="feature-sections">
 
 <div class="feature-section-text">

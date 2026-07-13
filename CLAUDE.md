@@ -92,4 +92,4 @@ The page markets the actual Remote IDE iPadOS app (Swift/SwiftUI), which is **no
 
 ## Original application path
 
-/Users/sdidanov/Projects/Remote-IDE
+/Users/sdidanov/Library/Mobile Documents/com~apple~CloudDocs/Xcode/Remote-IDE

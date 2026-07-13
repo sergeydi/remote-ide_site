@@ -7,6 +7,7 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 
 <div class="feature-sections">
 
+<div class="feature-section">
 <div class="feature-section-text">
 <h3>A terminal that actually works</h3>
 <p>The SSH console in Remote IDE is powered by <a href="https://github.com/migueldeicaza/SwiftTerm" target="_blank" rel="noopener">SwiftTerm</a> — a full VT100/xterm terminal emulator. It handles ANSI escape codes, colors, cursor movement, and interactive programs the way a desktop terminal would.</p>
@@ -17,6 +18,8 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 <li>Interactive programs: Python REPL, node, psql, and more</li>
 <li>tmux and screen for persistent sessions</li>
 </ul>
+</div>
+<div class="feature-shot"><img src="remote-ide-ssh-terminal.png" alt="Full-screen SSH terminal running shell commands against a remote server"></div>
 </div>
 
 <div class="feature-section-text">

@@ -7,6 +7,22 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 
 <div class="feature-sections">
 
+<div class="feature-section">
+<div class="feature-section-text">
+<h3>A VS Code-style color theme, adapted for iPad</h3>
+<p>The color scheme is inspired by Visual Studio Code's default dark and light themes — familiar if you already spend time in VS Code on your Mac. Keywords, strings, comments, types, and functions each get a distinct, readable color in both dark and light appearances — a TOML file, for example, gets clearly colored section headers, keys, and string values even in light mode.</p>
+<p>The theme adapts automatically to your system appearance — no manual toggle in the app.</p>
+<ul>
+<li>Keywords: blue (dark) / purple (light)</li>
+<li>Strings: warm orange (dark) / dark red (light)</li>
+<li>Types and classes: teal in both modes</li>
+<li>Comments: italic green in both modes</li>
+<li>Functions: warm yellow (dark) / brown (light)</li>
+</ul>
+</div>
+<div class="feature-shot"><img src="remote-ide-syntax-highlighting-light.png" alt="pyproject.toml open in the editor in light mode, with section headers, keys, and strings syntax-highlighted"></div>
+</div>
+
 <div class="feature-section-text">
 <h3>Tree-sitter parsing — no regex shortcuts</h3>
 <p>Every language is parsed using <a href="https://tree-sitter.github.io/tree-sitter/" target="_blank" rel="noopener">Tree-sitter</a> — the same incremental parser used in Neovim, Helix, and VS Code. It builds a real syntax tree as you type, so highlighting stays accurate even in complex nested structures.</p>
@@ -26,19 +42,6 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 <li>Go, Rust, C, C++, Java, Ruby, PHP</li>
 <li>Bash / Zsh / Shell, HTML, CSS, SCSS</li>
 <li>JSON, YAML, TOML, Markdown, SQL</li>
-</ul>
-</div>
-
-<div class="feature-section-text">
-<h3>A VS Code-style color theme, adapted for iPad</h3>
-<p>The color scheme is inspired by Visual Studio Code's default dark and light themes — familiar if you already spend time in VS Code on your Mac. Keywords, strings, comments, types, and functions each get a distinct, readable color in both dark and light appearances.</p>
-<p>The theme adapts automatically to your system appearance — no manual toggle in the app.</p>
-<ul>
-<li>Keywords: blue (dark) / purple (light)</li>
-<li>Strings: warm orange (dark) / dark red (light)</li>
-<li>Types and classes: teal in both modes</li>
-<li>Comments: italic green in both modes</li>
-<li>Functions: warm yellow (dark) / brown (light)</li>
 </ul>
 </div>
 

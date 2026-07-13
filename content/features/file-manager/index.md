@@ -7,6 +7,19 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 
 <div class="feature-sections">
 
+<div class="feature-section">
+<div class="feature-section-text">
+<h3>Compact mode for smaller windows</h3>
+<p>When Remote IDE runs in a narrow Split View column or a small Stage Manager window, the sidebar switches to a compact list of projects. Tap a project to navigate into its file tree in a separate screen — the header shows the project name with a back button to return to the project list. Everything still works — just optimized for less horizontal space.</p>
+<ul>
+<li>Automatic compact/regular layout based on available width</li>
+<li>NavigationStack-based navigation in compact mode</li>
+<li>Same create/delete/rename functionality in both layouts</li>
+</ul>
+</div>
+<div class="feature-shot"><img src="remote-ide-compact-file-browser.png" alt="Compact file tree view showing a project's files and folders with a back button to return to the projects list"></div>
+</div>
+
 <div class="feature-section-text">
 <h3>Projects and files in one sidebar</h3>
 <p>The sidebar shows two levels: your projects at the top, and the file tree of the selected project below. Tap a project to expand its tree. Tap a file to open it in the editor. It's the same navigation model as Xcode's Project Navigator — familiar if you already develop on Apple platforms.</p>
@@ -38,16 +51,6 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 <ul>
 <li>Color-coded status labels: A (added), M (modified), D (deleted), R (renamed)</li>
 <li>One-tap access to the full Git Status and diff view</li>
-</ul>
-</div>
-
-<div class="feature-section-text">
-<h3>Compact mode for smaller windows</h3>
-<p>When Remote IDE runs in a narrow Split View column or a small Stage Manager window, the sidebar switches to a compact list of projects. Tap a project to navigate into its file tree in a separate screen. Everything still works — just optimized for less horizontal space.</p>
-<ul>
-<li>Automatic compact/regular layout based on available width</li>
-<li>NavigationStack-based navigation in compact mode</li>
-<li>Same create/delete/rename functionality in both layouts</li>
 </ul>
 </div>
 

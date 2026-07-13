@@ -7,6 +7,22 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 
 <div class="feature-sections">
 
+<div class="feature-section">
+<div class="feature-section-text">
+<h3>Full diff viewer</h3>
+<p>Tap the git status button in the file tree header to open the Git Status panel. It shows every changed file in the project, grouped by status. Select any file to see a full unified diff — with line numbers, hunk headers, and color-coded additions and deletions.</p>
+<p>The same red-for-removed, green-for-added coloring shows up anywhere a diff appears in Remote IDE — including when the AI agent edits a file for you, so you can confirm exactly what changed before it goes further.</p>
+<ul>
+<li>Added lines highlighted in green</li>
+<li>Deleted lines highlighted in red</li>
+<li>Context lines in neutral gray</li>
+<li>Old and new line numbers shown side by side</li>
+<li>Hunk headers for navigating large diffs</li>
+</ul>
+</div>
+<div class="feature-shot"><img src="remote-ide-git-diff-agent.png" alt="AI agent session showing a color-coded diff for pyproject.toml, with the removed line in red and the added line in green"></div>
+</div>
+
 <div class="feature-section-text">
 <h3>Git status in the file tree</h3>
 <p>Modified files are highlighted directly in the project tree — no separate git panel to open, no command to run. As soon as you save a file, the indicator updates to reflect the current git status of each item.</p>
@@ -17,19 +33,6 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 <li>Deleted files: red</li>
 <li>Renamed files: blue</li>
 <li>Conflicted files: red</li>
-</ul>
-</div>
-
-<div class="feature-section-text">
-<h3>Full diff viewer</h3>
-<p>Tap the git status button in the file tree header to open the Git Status panel. It shows every changed file in the project, grouped by status. Select any file to see a full unified diff — with line numbers, hunk headers, and color-coded additions and deletions.</p>
-<p>The diff viewer scrolls both vertically and horizontally, so long lines don't get cut off. It uses a monospaced font throughout for readability.</p>
-<ul>
-<li>Added lines highlighted in green</li>
-<li>Deleted lines highlighted in red</li>
-<li>Context lines in neutral gray</li>
-<li>Old and new line numbers shown side by side</li>
-<li>Hunk headers for navigating large diffs</li>
 </ul>
 </div>
 

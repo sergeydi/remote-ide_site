@@ -7,6 +7,20 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 
 <div class="feature-sections">
 
+<div class="feature-section">
+<div class="feature-section-text">
+<h3>Available in the editor and the terminal</h3>
+<p>The toolbar appears whenever the editor or the SSH terminal has keyboard focus, and it adapts to what you're doing. In the terminal, it swaps in shell-specific keys — Esc, Ctrl, tilde, pipe, slash, and dash — plus a row of arrow buttons for jumping to the start or end of the line and moving through command history, so you're not reaching for gestures mid-command.</p>
+<ul>
+<li>Esc and Ctrl — for vim, nano, and Ctrl+C</li>
+<li>Tilde, pipe, slash, and dash for paths and shell syntax</li>
+<li>Jump-to-start / jump-to-end and arrow navigation</li>
+<li>Active in the SSH terminal and the AI agent terminal window</li>
+</ul>
+</div>
+<div class="feature-shot"><img src="remote-ide-terminal-keyboard-toolbar.png" alt="SSH terminal with the custom keyboard toolbar showing Esc, Ctrl, and navigation arrow keys above the software keyboard"></div>
+</div>
+
 <div class="feature-section-text">
 <h3>The keys missing from the iOS keyboard</h3>
 <p>The iOS software keyboard is great for writing prose. It's not great for writing code. The characters you type constantly — Tab, curly braces, square brackets, backtick, pipe, tilde — are buried in secondary keyboards that require multiple taps to reach.</p>
@@ -18,16 +32,6 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 <li>Parentheses <code>( )</code></li>
 <li>Dot <code>.</code>, equals <code>=</code>, hash <code>#</code></li>
 <li>Backtick, pipe, tilde, underscore, and more</li>
-</ul>
-</div>
-
-<div class="feature-section-text">
-<h3>Available in the editor and the terminal</h3>
-<p>The toolbar appears whenever the editor or the SSH terminal has keyboard focus. In the terminal, the same set of keys speeds up command entry — typing paths, flags, and shell syntax is faster when you don't have to hunt for punctuation.</p>
-<ul>
-<li>Active in the code editor</li>
-<li>Active in the SSH terminal</li>
-<li>Active in the AI agent terminal window</li>
 </ul>
 </div>
 

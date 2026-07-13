@@ -7,9 +7,10 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 
 <div class="feature-sections">
 
+<div class="feature-section">
 <div class="feature-section-text">
 <h3>Password and private key auth</h3>
-<p>Remote IDE supports both authentication methods you'd use on a desktop: password-based and private key-based. Choose the method when you add a server; it's stored with the server configuration and used automatically on every connection.</p>
+<p>Remote IDE supports both authentication methods you'd use on a desktop: password-based and private key-based. Choose the method from a picker in the server's Authentication section; it's stored with the server configuration and used automatically on every connection.</p>
 <p>Private keys are pasted in PEM format — the same format used by OpenSSH. Ed25519 keys are parsed natively. If your key has a passphrase, you can store that separately in the Keychain and it's supplied automatically at connection time.</p>
 <ul>
 <li>Password authentication</li>
@@ -17,6 +18,8 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 <li>Ed25519 key support</li>
 <li>Optional passphrase for encrypted private keys</li>
 </ul>
+</div>
+<div class="feature-shot"><img src="remote-ide-ssh-password-auth.png" alt="Edit Server screen with connection details and an Authentication section showing the Password method picker"></div>
 </div>
 
 <div class="feature-section-text">

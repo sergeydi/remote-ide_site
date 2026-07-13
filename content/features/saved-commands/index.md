@@ -7,6 +7,7 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 
 <div class="feature-sections">
 
+<div class="feature-section">
 <div class="feature-section-text">
 <h3>Your command library</h3>
 <p>Remote IDE lets you save any command you run frequently — build scripts, server restarts, test runners, deployment commands, log tails — under a short name. Open the Commands sheet, tap a command, and it executes instantly in your active SSH session.</p>
@@ -17,6 +18,8 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 <li>Shared across all servers</li>
 <li>Available in the main terminal and the AI agent window</li>
 </ul>
+</div>
+<div class="feature-shot"><img src="remote-ide-saved-ssh-commands.png" alt="SSH Commands sheet listing saved commands, each with a one-tap run button"></div>
 </div>
 
 <div class="feature-section-text">

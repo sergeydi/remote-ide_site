@@ -7,6 +7,20 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 
 <div class="feature-sections">
 
+<div class="feature-section">
+<div class="feature-section-text">
+<h3>AI agent in a dedicated window</h3>
+<p>Run Claude Code or another AI agent in its own Remote IDE window while you review its changes in a second window. The agent writes code, the second window shows you the diff.</p>
+<p>This is the workflow that makes AI-assisted development actually pleasant on iPad — no tab switching, no context loss.</p>
+<ul>
+<li>Agent window runs <code>claude</code> in your SSH terminal</li>
+<li>Editor window shows the files being modified</li>
+<li>Review changes in real time as the agent works</li>
+</ul>
+</div>
+<div class="feature-shot"><img src="remote-ide-split-view-ai-agent.png" alt="SSH console window side by side with a dedicated Claude Code agent window in Split View"></div>
+</div>
+
 <div class="feature-section-text">
 <h3>Split View: code and docs side by side</h3>
 <p>Open Remote IDE in Split View alongside Safari, Notes, or any other app. Read the documentation on the right while you edit code on the left — no switching, no losing your place.</p>
@@ -27,17 +41,6 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 <li>Each window maintains its own SSH session</li>
 <li>Independent file trees and editor state per window</li>
 <li>Drag files between windows via the Files app</li>
-</ul>
-</div>
-
-<div class="feature-section-text">
-<h3>AI agent in a dedicated window</h3>
-<p>Run Claude Code or another AI agent in its own Remote IDE window while you review its changes in a second window. The agent writes code, the second window shows you the diff.</p>
-<p>This is the workflow that makes AI-assisted development actually pleasant on iPad — no tab switching, no context loss.</p>
-<ul>
-<li>Agent window runs <code>claude</code> in your SSH terminal</li>
-<li>Editor window shows the files being modified</li>
-<li>Review changes in real time as the agent works</li>
 </ul>
 </div>
 

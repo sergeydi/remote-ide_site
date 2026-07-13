@@ -526,6 +526,10 @@
     align-items: center;
   }
 
+  .privacy-box > div {
+    min-width: 0;
+  }
+
   .privacy-points {
     list-style: none;
     display: flex;
@@ -928,6 +932,19 @@
     color: var(--muted);
     text-align: center;
     padding: 24px;
+  }
+
+  .feature-shot {
+    min-width: 0;
+  }
+
+  .feature-shot img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: 16px;
   }
 
   .window-mockup {
