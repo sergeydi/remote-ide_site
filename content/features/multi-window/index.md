@@ -1,5 +1,6 @@
 ---
 title: "Split View & Stage Manager"
+date: 2026-07-13
 seo_title: "Split View & Stage Manager Support for iPad — Remote IDE"
 description: "Split View and Stage Manager support in Remote IDE for iPad. Run multiple SSH sessions, projects, and AI agents side by side in independent windows."
 icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>'
@@ -9,7 +10,7 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 
 <div class="feature-section">
 <div class="feature-section-text">
-<h3>AI agent in a dedicated window</h3>
+<h2>AI agent in a dedicated window</h2>
 <p>Run Claude Code or another AI agent in its own Remote IDE window while you review its changes in a second window. The agent writes code, the second window shows you the diff.</p>
 <p>This is the workflow that makes AI-assisted development actually pleasant on iPad — no tab switching, no context loss.</p>
 <ul>
@@ -18,11 +19,11 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 <li>Review changes in real time as the agent works</li>
 </ul>
 </div>
-<div class="feature-shot"><img src="remote-ide-split-view-ai-agent.png" alt="SSH console window side by side with a dedicated Claude Code agent window in Split View"></div>
+{{< shot src="remote-ide-split-view-ai-agent.png" alt="SSH console window side by side with a dedicated Claude Code agent window in Split View" >}}
 </div>
 
 <div class="feature-section-text">
-<h3>Split View: code and docs side by side</h3>
+<h2>Split View: code and docs side by side</h2>
 <p>Open Remote IDE in Split View alongside Safari, Notes, or any other app. Read the documentation on the right while you edit code on the left — no switching, no losing your place.</p>
 <p>Resize the split to whatever ratio works for you. Remote IDE adapts its layout as the window shrinks or grows.</p>
 <ul>
@@ -33,7 +34,7 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 </div>
 
 <div class="feature-section-text">
-<h3>Stage Manager: multiple windows, full control</h3>
+<h2>Stage Manager: multiple windows, full control</h2>
 <p>With Stage Manager enabled, you can run multiple Remote IDE windows simultaneously — each with its own project, SSH connection, and state. Switch between them instantly without losing context.</p>
 <p>Stage Manager treats each window as an independent workspace. You can have your backend server in one window and your frontend in another, both connected over SSH.</p>
 <ul>

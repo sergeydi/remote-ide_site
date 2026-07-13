@@ -2,18 +2,34 @@
 <!-- Remote IDE — iPad SSH client & code editor for iPadOS -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 {{ $pageTitle := or .Params.seo_title (cond .IsHome .Site.Title (printf "%s — Remote IDE" .Title)) }}
+{{ $ogImage := .Site.Params.ogImage }}
+{{ with .Resources.ByType "image" }}
+  {{ with (index . 0).Resize "1200x webp q80" }}{{ $ogImage = .Permalink }}{{ end }}
+{{ end }}
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:title" content="{{ $pageTitle }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:type" content="{{ if .IsHome }}website{{ else if eq .Section "blog" }}article{{ else }}website{{ end }}">
-<meta property="og:image" content="{{ .Site.Params.ogImage }}">
+<meta property="og:image" content="{{ $ogImage }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ $pageTitle }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="apple-itunes-app" content="app-id=6762590018">
 <link rel="canonical" href="{{ .Permalink }}">
+{{ if .Params.translationSet }}
+{{ $set := where site.RegularPages "Params.translationSet" .Params.translationSet }}
+{{ range $set }}
+<link rel="alternate" hreflang="{{ .Params.contentLang }}" href="{{ .Permalink }}">
+{{ end }}
+{{ with index (where $set "Params.contentLang" "en") 0 }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{ end }}
+{{ end }}
 {{ if .IsHome }}
 <script type="application/ld+json">
 {

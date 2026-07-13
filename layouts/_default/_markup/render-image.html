@@ -1,0 +1,11 @@
+{{- $img := .Page.Resources.GetMatch .Destination -}}
+{{- if $img -}}
+  {{- $maxWidth := 1100 -}}
+  {{- if eq .Page.Section "blog" -}}{{- $maxWidth = 1360 -}}{{- end -}}
+  {{- $w := $maxWidth -}}
+  {{- if lt $img.Width $maxWidth -}}{{- $w = $img.Width -}}{{- end -}}
+  {{- $processed := $img.Resize (printf "%dx webp q80" $w) -}}
+  <img src="{{ $processed.RelPermalink }}" width="{{ $processed.Width }}" height="{{ $processed.Height }}" alt="{{ .Text }}" loading="lazy" decoding="async">
+{{- else -}}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy">
+{{- end -}}

@@ -1,0 +1,6 @@
+{{- $img := .Page.Resources.GetMatch (.Get "src") -}}
+{{- $maxWidth := 1100 -}}
+{{- $w := $maxWidth -}}
+{{- if lt $img.Width $maxWidth -}}{{- $w = $img.Width -}}{{- end -}}
+{{- $processed := $img.Resize (printf "%dx webp q80" $w) -}}
+<div class="feature-shot"><img src="{{ $processed.RelPermalink }}" width="{{ $processed.Width }}" height="{{ $processed.Height }}" alt="{{ .Get "alt" }}" loading="lazy" decoding="async"></div>

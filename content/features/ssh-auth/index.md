@@ -1,5 +1,6 @@
 ---
 title: "SSH Key & Password Auth"
+date: 2026-07-13
 seo_title: "SSH Key & Password Authentication for iPad — Remote IDE"
 description: "SSH key and password authentication for iPad. Credentials stored securely in the iOS Keychain — never in files, never transmitted to any third party."
 icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></svg>'
@@ -9,7 +10,7 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 
 <div class="feature-section">
 <div class="feature-section-text">
-<h3>Password and private key auth</h3>
+<h2>Password and private key auth</h2>
 <p>Remote IDE supports both authentication methods you'd use on a desktop: password-based and private key-based. Choose the method from a picker in the server's Authentication section; it's stored with the server configuration and used automatically on every connection.</p>
 <p>Private keys are pasted in PEM format — the same format used by OpenSSH. Ed25519 keys are parsed natively. If your key has a passphrase, you can store that separately in the Keychain and it's supplied automatically at connection time.</p>
 <ul>
@@ -19,11 +20,11 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 <li>Optional passphrase for encrypted private keys</li>
 </ul>
 </div>
-<div class="feature-shot"><img src="remote-ide-ssh-password-auth.png" alt="Edit Server screen with connection details and an Authentication section showing the Password method picker"></div>
+{{< shot src="remote-ide-ssh-password-auth.png" alt="Edit Server screen with connection details and an Authentication section showing the Password method picker" >}}
 </div>
 
 <div class="feature-section-text">
-<h3>Keychain storage — hardware-backed security</h3>
+<h2>Keychain storage — hardware-backed security</h2>
 <p>Passwords, private keys, and passphrases are stored exclusively in the iOS Keychain — the same hardware-backed secure enclave used by iOS itself for Face ID credentials and payment data. They are never written to iCloud, never logged, and never transmitted to any third party.</p>
 <p>When you delete a server from Remote IDE, its credentials are deleted from the Keychain immediately. There are no orphaned secrets left behind.</p>
 <ul>
@@ -35,7 +36,7 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 </div>
 
 <div class="feature-section-text">
-<h3>Multiple servers, one place</h3>
+<h2>Multiple servers, one place</h2>
 <p>Add as many servers as you need. Each server has its own name, host, port, username, authentication credentials, and remote paths. Switch between them from the servers sheet — one tap to connect, one tap to disconnect.</p>
 <p>Edit or delete any server at any time. Swipe left on a server in the list to reveal the edit and delete actions.</p>
 <ul>

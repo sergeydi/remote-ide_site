@@ -3,6 +3,8 @@ title: "Building CLI Apps on iPad: an AI Agent, a Remote VPS, and Stage Manager"
 date: 2026-07-12
 seo_title: "CLI Development on iPad with an AI Agent - Remote IDE"
 description: "A working setup for building command-line tools on iPad: an AI agent over SSH on a VPS, per-project tmux sessions, a remote filesystem, syntax highlighting, and Git diffs - all inside Stage Manager."
+contentLang: "en"
+translationSet: "cli-agent"
 ---
 
 A command-line app isn't the most obvious thing to build on a tablet. No real terminal, no filesystem you're used to from a desktop, no proper multitasking - that's how it looked just a couple of years ago. But move the actual code execution to a remote Linux server and turn the iPad into a thin client for driving an AI agent and reviewing the result, and the picture changes completely. Below is the workflow I've settled on for building Python CLI tools: a VPS + an AI coding agent (Claude Code) in tmux + [Remote IDE](https://remote-ide.com) as a single entry point, all on an iPad with Stage Manager.

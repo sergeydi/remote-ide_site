@@ -3,6 +3,8 @@ title: "iPad as a Developer Tool in the Age of Agentic Programming"
 date: 2026-05-10
 seo_title: "iPad as a Developer Tool: Agentic Coding Era — Remote IDE"
 description: "How agentic coding and iPadOS 26 Stage Manager make the iPad a real developer machine — and how Remote IDE was built from scratch for this workflow."
+contentLang: "en"
+translationSet: "ipad-dev-tool"
 ---
 
 Not long ago, talking about the iPad as a serious developer tool was met with scepticism. A Netflix machine, a sketching pad, a presentation device — but not a real environment for writing and deploying code. That scepticism had merit: iPadOS lacked proper multitasking for years, tools for working with remote servers barely existed, and the constant need to switch between apps made any serious workflow frustrating.

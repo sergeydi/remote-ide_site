@@ -1,5 +1,6 @@
 ---
 title: "Git Change Tracking"
+date: 2026-07-13
 seo_title: "Git Change Tracking & Diff Viewer for iPad — Remote IDE"
 description: "Git change tracking on iPad. See modified, added, and deleted files in your project tree. View diffs and git status in Remote IDE without leaving the app."
 icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6a9 9 0 0 0-9 9V3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/></svg>'
@@ -9,7 +10,7 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 
 <div class="feature-section">
 <div class="feature-section-text">
-<h3>Full diff viewer</h3>
+<h2>Full diff viewer</h2>
 <p>Tap the git status button in the file tree header to open the Git Status panel. It shows every changed file in the project, grouped by status. Select any file to see a full unified diff — with line numbers, hunk headers, and color-coded additions and deletions.</p>
 <p>The same red-for-removed, green-for-added coloring shows up anywhere a diff appears in Remote IDE — including when the AI agent edits a file for you, so you can confirm exactly what changed before it goes further.</p>
 <ul>
@@ -20,11 +21,11 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 <li>Hunk headers for navigating large diffs</li>
 </ul>
 </div>
-<div class="feature-shot"><img src="remote-ide-git-diff-agent.png" alt="AI agent session showing a color-coded diff for pyproject.toml, with the removed line in red and the added line in green"></div>
+{{< shot src="remote-ide-git-diff-agent.png" alt="AI agent session showing a color-coded diff for pyproject.toml, with the removed line in red and the added line in green" >}}
 </div>
 
 <div class="feature-section-text">
-<h3>Git status in the file tree</h3>
+<h2>Git status in the file tree</h2>
 <p>Modified files are highlighted directly in the project tree — no separate git panel to open, no command to run. As soon as you save a file, the indicator updates to reflect the current git status of each item.</p>
 <p>Each file is labeled with a color-coded status letter: <strong style="color:var(--green);">A</strong> for added, <strong style="color:var(--amber);">M</strong> for modified, <strong style="color:#ff453a;">D</strong> for deleted, <strong style="color:var(--blue);">R</strong> for renamed. You can see the state of your entire working tree at a glance without running a single command.</p>
 <ul>
@@ -37,7 +38,7 @@ icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" s
 </div>
 
 <div class="feature-section-text">
-<h3>Works on the files you already have</h3>
+<h2>Works on the files you already have</h2>
 <p>Git status is read from the project files in your iCloud Drive — the same files the editor works with. There's nothing to configure and no separate git tool to install on your iPad. As long as the project directory contains a <code>.git</code> folder, status tracking works automatically.</p>
 <p>If the project isn't a git repository, the Git Status panel tells you clearly — no confusing empty states.</p>
 <ul>
