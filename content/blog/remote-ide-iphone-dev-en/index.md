@@ -2,7 +2,7 @@
 title: "How to Develop iPhone Apps on an iPad"
 date: 2026-08-28
 seo_title: "Build iOS Apps on iPad Remotely via a Mac — Remote IDE"
-description: "Xcode only runs on macOS, but that doesn't mean writing and building an iPhone app requires sitting at a Mac. A walkthrough of Remote IDE + Tailscale + an AI agent, using the real-world MCP Notes project."
+description: "Xcode runs only on macOS, but you can build iPhone apps from an iPad. A walkthrough of Remote IDE, Tailscale and an AI agent on a real project."
 contentLang: "en"
 translationSet: "iphone-dev"
 ---

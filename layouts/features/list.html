@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <span>{{ .Title }}</span>
+  </div>
+  <div class="section-label">{{ .Title }}</div>
+  <h1>Everything you need to code on iPad</h1>
+  {{ with .Description }}<p class="page-desc">{{ . }}</p>{{ end }}
+</div>
+
+<section style="padding-top:0;">
+  <div class="features-grid reveal">
+    {{ range .Pages.ByWeight }}
+    {{ partial "feature-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

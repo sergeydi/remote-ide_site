@@ -2,7 +2,7 @@
 title: "Пишу консольні застосунки на iPad: AI-агент, віддалений VPS і Stage Manager"
 date: 2026-07-12
 seo_title: "Розробка CLI на iPad з AI-агентом і VPS - Remote IDE"
-description: "Як зібрати робочий процес розробки консольних застосунків на iPad: AI-агент по SSH на VPS, tmux-сесії на проєкт, віддалена файлова система, підсвітка синтаксису та Git-дифи - усе в Stage Manager."
+description: "Розробка консольних застосунків на iPad: AI-агент по SSH на VPS, tmux-сесія на проєкт, віддалена файлова система та Git-дифи у Stage Manager."
 contentLang: "uk"
 translationSet: "cli-agent"
 ---

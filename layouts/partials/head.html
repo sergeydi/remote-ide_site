@@ -8,7 +8,7 @@
 {{ $pageTitle := or .Params.seo_title (cond .IsHome .Site.Title (printf "%s — Remote IDE" .Title)) }}
 {{ $ogImage := .Site.Params.ogImage }}
 {{ with .Resources.ByType "image" }}
-  {{ with (index . 0).Resize "1200x webp q80" }}{{ $ogImage = .Permalink }}{{ end }}
+  {{ with (index . 0).Resize "1200x jpg q85" }}{{ $ogImage = .Permalink }}{{ end }}
 {{ end }}
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:title" content="{{ $pageTitle }}">
@@ -20,6 +20,7 @@
 <meta name="twitter:title" content="{{ $pageTitle }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="apple-itunes-app" content="app-id=6762590018">
+{{ if eq .Kind "404" }}<meta name="robots" content="noindex">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
 {{ if .Params.translationSet }}
 {{ $set := where site.RegularPages "Params.translationSet" .Params.translationSet }}
@@ -97,6 +98,31 @@
   }
 }
 </script>
+{{ end }}
+{{ if and .IsPage (eq .Section "blog") }}
+{{ $post := dict
+  "@context" "https://schema.org"
+  "@type" "BlogPosting"
+  "headline" .Title
+  "description" .Description
+  "image" $ogImage
+  "url" .Permalink
+  "mainEntityOfPage" .Permalink
+  "inLanguage" (.Params.contentLang | default "en")
+  "datePublished" (.Date.Format "2006-01-02")
+  "dateModified" (.Lastmod.Format "2006-01-02")
+  "author" (dict "@type" "Organization" "name" "Remote IDE" "url" "https://remote-ide.com")
+  "publisher" (dict "@type" "Organization" "name" "Remote IDE" "url" "https://remote-ide.com" "logo" (dict "@type" "ImageObject" "url" "https://remote-ide.com/apple-touch-icon.png"))
+}}
+<script type="application/ld+json">{{ $post | jsonify | safeJS }}</script>
+{{ end }}
+{{ if and .IsPage (in (slice "blog" "features") .Section) }}
+{{ $crumbs := slice
+  (dict "@type" "ListItem" "position" 1 "name" "Home" "item" "https://remote-ide.com/")
+  (dict "@type" "ListItem" "position" 2 "name" .CurrentSection.Title "item" .CurrentSection.Permalink)
+  (dict "@type" "ListItem" "position" 3 "name" .Title "item" .Permalink)
+}}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs | jsonify | safeJS }}</script>
 {{ end }}
 <title>{{ $pageTitle }}</title>
 <link rel="stylesheet" href="/css/main.css">

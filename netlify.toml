@@ -4,3 +4,10 @@
 
 [build.environment]
   HUGO_VERSION = "0.161.1"
+
+# Send the default Netlify subdomain to the primary domain (deploy previews are unaffected)
+[[redirects]]
+  from = "https://remote-ide.netlify.app/*"
+  to = "https://remote-ide.com/:splat"
+  status = 301
+  force = true

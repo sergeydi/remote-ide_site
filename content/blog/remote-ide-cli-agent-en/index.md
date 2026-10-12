@@ -2,7 +2,7 @@
 title: "Building CLI Apps on iPad: an AI Agent, a Remote VPS, and Stage Manager"
 date: 2026-07-12
 seo_title: "CLI Development on iPad with an AI Agent - Remote IDE"
-description: "A working setup for building command-line tools on iPad: an AI agent over SSH on a VPS, per-project tmux sessions, a remote filesystem, syntax highlighting, and Git diffs - all inside Stage Manager."
+description: "Building CLI tools on iPad: an AI agent over SSH on a VPS, per-project tmux sessions, a remote filesystem and Git diffs, all in Stage Manager."
 contentLang: "en"
 translationSet: "cli-agent"
 ---

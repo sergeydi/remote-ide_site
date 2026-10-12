@@ -1,8 +1,8 @@
 ---
 title: "Як розробляти застосунки для iPhone на iPad"
 date: 2026-08-28
-seo_title: "Розробка iOS-застосунків на iPad віддалено через Mac — Remote IDE"
-description: "Xcode працює тільки на macOS, але це не означає, що писати й збирати iPhone-застосунок можна лише сидячи за Mac. Розбираємо звʼязку Remote IDE + Tailscale + AI-агент на реальному прикладі розробки MCP Notes."
+seo_title: "Розробка iOS-застосунків на iPad через Mac — Remote IDE"
+description: "Xcode працює лише на macOS, але збирати iPhone-застосунки можна й з iPad. Розбираємо звʼязку Remote IDE, Tailscale та AI-агента на реальному проєкті."
 contentLang: "uk"
 translationSet: "iphone-dev"
 ---

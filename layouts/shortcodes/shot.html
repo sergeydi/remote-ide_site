@@ -3,4 +3,6 @@
 {{- $w := $maxWidth -}}
 {{- if lt $img.Width $maxWidth -}}{{- $w = $img.Width -}}{{- end -}}
 {{- $processed := $img.Resize (printf "%dx webp q80" $w) -}}
-<div class="feature-shot"><img src="{{ $processed.RelPermalink }}" width="{{ $processed.Width }}" height="{{ $processed.Height }}" alt="{{ .Get "alt" }}" loading="lazy" decoding="async"></div>
+{{- /* The first screenshot is usually above the fold (LCP) — load it eagerly. */ -}}
+{{- $loading := cond (eq .Ordinal 0) `fetchpriority="high"` `loading="lazy"` -}}
+<div class="feature-shot"><img src="{{ $processed.RelPermalink }}" width="{{ $processed.Width }}" height="{{ $processed.Height }}" alt="{{ .Get "alt" }}" {{ $loading | safeHTMLAttr }} decoding="async"></div>

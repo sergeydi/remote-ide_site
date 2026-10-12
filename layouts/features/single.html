@@ -3,7 +3,7 @@
   <div class="breadcrumb">
     <a href="/">Home</a>
     <span class="breadcrumb-sep">/</span>
-    <a href="/#features">Features</a>
+    <a href="/features/">Features</a>
     <span class="breadcrumb-sep">/</span>
     <span>{{ .Title }}</span>
   </div>
@@ -18,11 +18,25 @@
 <section style="padding-top:0;">
   {{ .Content }}
 
+  {{ $all := .CurrentSection.Pages.ByWeight }}
+  {{ $n := len $all }}
+  {{ $i := 0 }}
+  {{ range $k, $p := $all }}{{ if eq $p $.Page }}{{ $i = $k }}{{ end }}{{ end }}
+  <div style="margin-bottom:80px;">
+    <h2 style="margin-bottom:24px;">More features</h2>
+    <div class="features-grid reveal">
+      {{ range seq 1 3 }}
+      {{ partial "feature-card.html" (index $all (mod (add $i .) $n)) }}
+      {{ end }}
+    </div>
+    <p style="margin-top:24px;"><a href="/features/" style="color:var(--blue);text-decoration:none;font-family:var(--mono);font-size:13px;">All features →</a></p>
+  </div>
+
   <div class="cta-box reveal">
     <h2>Ready to code on iPad?</h2>
     <p>Download Remote IDE and connect to your server in under a minute.</p>
     <a href="{{ .Site.Params.appStoreURL }}" class="appstore-badge" target="_blank" rel="noopener" style="margin-bottom:0;display:inline-block;">
-      <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+      <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="156" height="52">
     </a>
   </div>
 </section>
